@@ -45,7 +45,7 @@
             android:screenOrientation="portrait" />
 
         <activity
-            android:name=".ui.author.AboutAuthorActivity"
+            android:name=".ui.aboutAuthor.AboutAuthorActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
@@ -64,12 +64,19 @@
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.gps.gpsMap.LocationMapActivity"
-            android:windowSoftInputMode="stateHidden"
+        <activity
+            android:name=".ui.gps.gpsMap.LocationMapActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+
+        <activity
+            android:name=".ui.gps.gpsList.LocationListActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 
-        <activity android:name=".ui.gps.gpsList.LocationListActivity"
+        <activity
+            android:name=".ui.aboutApp.AboutAppActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait" />
 

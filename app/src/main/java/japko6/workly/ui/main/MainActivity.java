@@ -28,7 +28,8 @@ import butterknife.ButterKnife;
 import japko6.workly.R;
 import japko6.workly.objects.Time;
 import japko6.workly.prefs.Prefs;
-import japko6.workly.ui.author.AboutAuthorActivity;
+import japko6.workly.ui.aboutApp.AboutAppActivity;
+import japko6.workly.ui.aboutAuthor.AboutAuthorActivity;
 import japko6.workly.ui.base.BaseActivity;
 import japko6.workly.ui.details.DetailsListFragment;
 import japko6.workly.ui.gps.gpsList.LocationListActivity;
@@ -132,7 +133,8 @@ public class MainActivity extends BaseActivity implements MainPresenter.View {
                         startActivity(intent);
                         break;
                     case R.id.d_about_app:
-                        showInDevToast();
+                        intent = new Intent(MainActivity.this, AboutAppActivity.class);
+                        startActivity(intent);
                         break;
                     default:
                         showInDevToast();
@@ -277,6 +279,9 @@ public class MainActivity extends BaseActivity implements MainPresenter.View {
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.drawer_about) {
             Intent intent = new Intent(this, AboutAuthorActivity.class);
+            startActivity(intent);
+        } else if (item.getItemId() == R.id.drawer_about_app) {
+            Intent intent = new Intent(this, AboutAppActivity.class);
             startActivity(intent);
         }
         return super.onOptionsItemSelected(item);
