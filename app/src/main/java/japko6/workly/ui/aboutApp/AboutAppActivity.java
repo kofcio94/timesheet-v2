@@ -35,9 +35,11 @@ public class AboutAppActivity extends AppCompatActivity {
                 finish();
             }
         });
-        View view = findViewById(R.id.profile_image);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
-        view.startAnimation(animation);
+        if (Prefs.areAdvancedAnimationsEnabled()) {
+            View view = findViewById(R.id.profile_image);
+            Animation animation = AnimationUtils.loadAnimation(this, R.anim.rotate);
+            view.startAnimation(animation);
+        }
     }
 
     @Override
