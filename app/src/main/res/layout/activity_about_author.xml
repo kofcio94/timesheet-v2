@@ -58,14 +58,14 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:textColorLink="@color/gray"
-                    android:autoLink="email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="60"
+                    android:autoLink="email"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
                     android:text="@string/kofcio94_yahoo_com"
+                    android:textColorLink="@color/gray"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -86,14 +86,14 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:textColorLink="@color/gray"
-                    android:autoLink="phone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="60"
+                    android:autoLink="phone"
                     android:paddingLeft="10dp"
                     android:paddingRight="20dp"
                     android:text="@string/_48_668027720"
+                    android:textColorLink="@color/gray"
                     android:textSize="15sp" />
             </LinearLayout>
 
