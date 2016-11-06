@@ -54,16 +54,18 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="E-mail:"
+                    android:text="@string/e_mail"
                     android:textSize="13sp" />
 
                 <TextView
+                    android:textColorLink="@color/gray"
+                    android:autoLink="email"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="60"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="kofcio94@yahoo.com"
+                    android:text="@string/kofcio94_yahoo_com"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -80,16 +82,18 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="Phone number:"
+                    android:text="@string/phone_number"
                     android:textSize="13sp" />
 
                 <TextView
+                    android:textColorLink="@color/gray"
+                    android:autoLink="phone"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="60"
                     android:paddingLeft="10dp"
                     android:paddingRight="20dp"
-                    android:text="+48 668027720"
+                    android:text="@string/_48_668027720"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -106,7 +110,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="Date of birth:"
+                    android:text="@string/date_of_birth"
                     android:textSize="13sp" />
 
                 <TextView
@@ -115,7 +119,7 @@
                     android:layout_weight="60"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="02.12.1994"
+                    android:text="@string/_02_12_1994"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -132,7 +136,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="Country:"
+                    android:text="@string/country"
                     android:textSize="13sp" />
 
                 <TextView
@@ -141,7 +145,7 @@
                     android:layout_weight="60"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="Poland"
+                    android:text="@string/poland"
                     android:textSize="15sp" />
             </LinearLayout>
 
@@ -158,7 +162,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="EXPERIENCE"
+                    android:text="@string/experience"
                     android:textColor="@color/cv_color"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -185,7 +189,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="01/2016 - today"
+                    android:text="@string/_01_2016_today"
                     android:textSize="13sp" />
 
                 <LinearLayout
@@ -199,14 +203,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Android Developer"
+                        android:text="@string/android_developer"
                         android:textColor="@color/cv_color"
                         android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="uPaid Sp. z o.o."
+                        android:text="@string/upaid_sp_z_o_o"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -224,7 +228,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="05/2015 - 04/2016"
+                    android:text="@string/_05_2015_04_2016"
                     android:textSize="13sp" />
 
                 <LinearLayout
@@ -238,14 +242,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Web developer"
+                        android:text="@string/web_developer"
                         android:textColor="@color/cv_color"
                         android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Freelancer"
+                        android:text="@string/freelancer"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -263,7 +267,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="07/2015 - 01/2016"
+                    android:text="@string/_07_2015_01_2016"
                     android:textSize="13sp" />
 
                 <LinearLayout
@@ -277,14 +281,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="oftware Test Engineer"
+                        android:text="@string/oftware_test_engineer"
                         android:textColor="@color/cv_color"
                         android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="uPaid Sp. z o.o."
+                        android:text="@string/upaid_sp_z_o_o"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -301,7 +305,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="EDUCATION"
+                    android:text="@string/education"
                     android:textColor="@color/cv_color"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -328,7 +332,7 @@
                     android:layout_weight="40"
                     android:paddingLeft="20dp"
                     android:paddingRight="10dp"
-                    android:text="10/2013 - today"
+                    android:text="@string/_10_2013_today"
                     android:textSize="13sp" />
 
                 <LinearLayout
@@ -342,14 +346,14 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="University of Technology in Lublin"
+                        android:text="@string/university_of_technology_in_lublin"
                         android:textColor="@color/cv_color"
                         android:textSize="15sp" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="IT, engineering studies"
+                        android:text="@string/it_engineering_studies"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -366,7 +370,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="LANGUAGES"
+                    android:text="@string/languages"
                     android:textColor="@color/cv_color"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -399,7 +403,7 @@
                         android:layout_weight="40"
                         android:paddingLeft="20dp"
                         android:paddingRight="10dp"
-                        android:text="Polish"
+                        android:text="@string/polish"
                         android:textSize="13sp" />
 
                     <TextView
@@ -408,7 +412,7 @@
                         android:layout_weight="60"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:text="native"
+                        android:text="@string/native_lang"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -432,7 +436,7 @@
                         android:layout_weight="40"
                         android:paddingLeft="20dp"
                         android:paddingRight="10dp"
-                        android:text="English"
+                        android:text="@string/english"
                         android:textSize="13sp" />
 
                     <TextView
@@ -441,7 +445,7 @@
                         android:layout_weight="60"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:text="good"
+                        android:text="@string/good"
                         android:textSize="15sp" />
                 </LinearLayout>
             </LinearLayout>
@@ -458,7 +462,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="SKILLS"
+                    android:text="@string/skills"
                     android:textColor="@color/cv_color"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -478,7 +482,7 @@
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="Java, Android SDK, JSON/XML, Rest API, Google Services, Retrofit, Material Design, Butter Knife, ProGuard, Crashlytics, JUnit, UI Automator, MonkeyRunner, Swing framework, SVN, GIT, UML, Agile, Scrum, Jira, Trello, Android Studio, Eclipsce, Linux, Windows, Unreal Engine 4, Blender, Photoshop CS6" />
+                android:text="@string/skills_desc" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -492,7 +496,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
-                    android:text="HOBBIES"
+                    android:text="@string/hobbies"
                     android:textColor="@color/cv_color"
                     android:textSize="17sp"
                     android:textStyle="bold" />
@@ -512,7 +516,7 @@
                 android:paddingBottom="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
-                android:text="New technologies, car spotting, drifting, cooking, volleyball, windsurfing, bicycle trips " />
+                android:text="@string/hobbies_desc" />
 
             <LinearLayout
                 android:layout_width="match_parent"
