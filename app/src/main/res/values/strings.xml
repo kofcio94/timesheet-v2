@@ -1,0 +1,157 @@
+<resources>
+    <string name="app_name">Time work!</string>
+    <string name="application_is_loading">Application is loading</string>
+    <string name="in_dev">in development</string>
+    <string name="ok">OK</string>
+    <string name="page_stats">Stats</string>
+    <string name="page_details">Work log list</string>
+    <string name="page_report">Send report</string>
+    <string name="page_settings">Settings</string>
+    <string name="menu_about_app">About author</string>
+
+    <!--globals-->
+    <string name="global_OK">Ok</string>
+    <string name="global_CANCEL">Cancel</string>
+    <string name="global_send">Generate and send</string>
+    <string name="global_saved">Saved!</string>
+
+    <!--main, stats-->
+    <string name="main_fragment_start_button">Start</string>
+    <string name="main_fragment_stop_button">Stop</string>
+    <string name="main_fragment_time_work">Work time</string>
+    <string name="main_fragment_how_many_hours">Today work time:</string>
+    <string name="main_fragment_how_many_hours_totally">Total work time:</string>
+    <string name="main_fragment_how_many_hours_avg">Average work time:</string>
+    <string name="main_activity_dialog_exit_text">Application will count work time in background.</string>
+    <string name="main_activity_dialog_password_input_hint">Enter password</string>
+    <string name="main_activity_wrong_password">Entered password is incorrect</string>
+
+    <!--about app-->
+    <string name="about_app_about_app">About application</string>
+    <string name="about_app_content">Timesheet, czyli aplikacja zliczająca godziny pracy i generująca co miesięczny raport.
+        W ustawieniach możesz wybrać, aplikacja ma spełniać swoje unkcje na podstawie geolokalizacji, czy też klasycznie,
+        za pomocą przycisku \"start\/stop\". Aplikacja jest w stworzona z wykożystaniem bibliotek typu OpenSource."</string>
+    <string name="about_app_contact_on_clicked_mail">Contact</string>
+    <string name="about_app_no_mail_client">No mail client installed</string>
+    <string name="about_app_author">Author</string>
+    <string name="about_app_author_content">Michał Jabłoński</string>
+    <string name="about_app_contact">Contact</string>
+    <string name="about_app_mail">kofcio94@yahoo.com</string>
+    <string name="about_app_mail_click"> - click to contact me.</string>
+
+    <!--mail-->
+    <string name="mail_fragment_mail_description">Enter email address, where you want to send generated report.</string>
+    <string name="mail_fragment_mail_to_send">Enter email address</string>
+    <string name="mail_fragment_date_hint">Enter te period, you want to generate raport.</string>
+    <string name="mail_fragment_date_example">01.01.2016 – 31.01.2016</string>
+    <string name="mail_fragment_report_subject">Timesheet from: </string>
+    <string name="mail_fragment_no_email_entered">No email entered</string>
+    <string name="mail_fragment_no_mail_client">Mail client</string>
+    <string name="mail_fragment_no_data_plus">No data. Try from date: </string>
+    <string name="mail_fragment_no_data">You have to work at least one day!</string>
+    <string name="mail_fragment_intent_title">Choose mail client.</string>
+    <string name="mail_fragment_time_work_total_mail">Whole work time:</string>
+    <string name="mail_fragment_time_work_mail">Work time:</string>
+
+    <!--settings-->
+    <string name="settings_fragment_password">Application security</string>
+    <string name="settings_fragment_password_new">Change app password</string>
+    <string name="settings_fragment_password_locations">GPS and locations</string>
+    <string name="settings_fragment_password_locations_content">Change location settings - you can add your work location, to punch in automatically.</string>
+    <string name="settings_fragment_dialog_old_password">Enter old password</string>
+    <string name="settings_fragment_dialog_new_password">Enter new password</string>
+    <string name="settings_fragment_dialog_to_short_password">Too short password</string>
+    <string name="settings_fragment_dialog_wrong_password">Wrong password</string>
+    <string name="settings_fragment_dialog_password_length">Password should be at least four digits</string>
+    <string name="settings_fragment_dialog_password_enter">Enter password</string>
+    <string name="settings_fragment_dialog_first_enter_password">To secure your application</string>
+    <string name="settings_fragment_dialog_first_enter_password_content">you can set up password in settings.</string>
+
+    <!--details-->
+    <string name="details_fragment_pull_to_refresh_text">Refreshing…</string>
+    <string name="details_fragment_filter_button">Filters</string>
+    <string name="details_fragment_filter_button_dialog_filter">Filter</string>
+    <string name="details_fragment_filter_button_dialog_delete_filters">Delete filters</string>
+    <string name="details_fragment_filter_dialog_date_from">From date:</string>
+    <string name="details_fragment_filter_dialog_date_to">To date:</string>
+    <string name="details_fragment_filter_dialog_date_example">DD:MM:YYYY</string>
+    <string name="details_fragment_no_data">No data to show</string>
+    <string name="details_fragment_data_wrong_format">Wrong date format.</string>
+    <string name="details_fragment_dialog_confirm_title">Are you sure to delete?</string>
+    <string name="details_fragment_deleted_msg">Successfully deleted!</string>
+    <string name="details_fragment_cant_delete_msg">Can`t delete because this item is in use!</string>
+
+    <!--details_edit-->
+    <string name="details_edit_start_time">Time start</string>
+    <string name="details_edit_stop_time">Time stop</string>
+    <string name="details_edit_total_time">Total work time</string>
+    <string name="details_edit_success_info">Successfully saved!</string>
+    <string name="details_edit_validation_error">Start time can`t be later than stop time!</string>
+    <string name="details_edit_dialog_changes_made_title">Changes detected!</string>
+    <string name="details_edit_dialog_changes_made_content">Do you want to save it?</string>
+
+    <!--details detailsNew-->
+    <string name="details_new_toolbar_tv">Add new work interval</string>
+    <string name="details_new_no_changes_info">No changes detected</string>
+    <string name="details_new_cant_add_date_error">This date is not available.</string>
+    <string name="activity_gps_settings_gps_content">If you want to get just notification, set toggle button to \"Notifications\" mode. if you want to start counting work time, set toggle button in position \"Auto\".</string>
+    <string name="activity_gps_settings_locations_list_content">You will find here all informaions about work places. To add new place, please click plus button. To delete, swipe item to left and click bin icon.</string>
+    <string name="activity_gps_location_list_title">List of known localisations.</string>
+    <string name="gps_activity_toolbar">GPS settings</string>
+    <string name="gps_activity_list">Locations list</string>
+    <string name="lorem_ipsum_example">Lorem ipsum dolor sit amet enim. Etiam ullamcorper.Suspendisse a pellentesque dui, non felis. Maecenas malesuada elit lectus felis, malesuada ultricies.</string>
+    <string name="gps_map_toolbar">Add work place</string>
+    <string name="gps_map_activity_company_name">Work place name</string>
+    <string name="gps_map_company_description">Work place description/address</string>
+    <string name="gps_map_hint_search">Search address</string>
+    <string name="global_save">Save</string>
+    <string name="please_wait">Loading...</string>
+    <string name="empty_search_list">Can`t find</string>
+    <string name="item_adr_street">Street</string>
+    <string name="item_adr_city">City</string>
+    <string name="item_adr_postal_code">Postal code</string>
+    <string name="adr_dialog_title">Choose from list</string>
+    <string name="no_title_entered">No name entered</string>
+    <string name="tootlbar_add_gps">Details</string>
+    <string name="no_location_entered">No location chosen!</string>
+    <string name="no_location_entered_content">To to that, hold your finger on map until marker will appear on map.</string>
+    <string name="enable_tracking_location">Enable location tracking</string>
+    <string name="gps_working_content_description">GPS mode</string>
+    <string name="location_gps_content_enable_description">After enabling localization, application will track your position. It is available only when GPS is enabled.</string>
+    <string name="notification_content">You are near your workplace!</string>
+    <string name="welcome">Welcome!</string>
+    <string name="R.string.location">Workplaces</string>
+    <string name="from">From:</string>
+    <string name="wrong_date_entered">Entered data is incorrect!</string>
+    <string name="working_days">Working days</string>
+    <string name="average">Average working time</string>
+    <string name="example">Example graph</string>
+    <string name="not_valid_mail">Email is not valid</string>
+    <string name="global_wrong_email_pattern">Enter correct email</string>
+    <string name="to_short_password">Password is too short</string>
+    <string name="enter_password">Enter password</string>
+    <string name="delete">←</string>
+    <string name="password_incorrect">Incorrect password</string>
+    <string name="no_data_available">No data available!</string>
+    <string name="do_you_want_to_delete">Do you want to delete</string>
+    <string name="item_from">item from</string>
+    <string name="day">Day</string>
+    <string name="advanced_visual_effects">Advanced visual effects</string>
+    <string name="disable_moving_background_and_chart_animations">Disable or enable moving background and chart animations (requires restart)</string>
+    <string name="days_visible_on_chart">Days visible on chart</string>
+    <string name="application_will_remind_you">Application will remind you to punch out work. It will appear after half time of your average time work (at least after 2 hours).</string>
+    <string name="reminder_not_content">Still in work?</string>
+    <string name="to">To:</string>
+    <string name="notifications">Notifications</string>
+    <string name="auto">Auto</string>
+    <string name="loading">Please wait...</string>
+    <string name="no_network">Enable network access first</string>
+    <string name="address">Address:</string>
+    <string name="no_data_gps">No data obtained</string>
+    <string name="no_content_info">No description or address!</string>
+    <string name="about_app">About application</string>
+    <string name="work_locations">Work locations</string>
+    <string name="gps_settings">GPS settings</string>
+    <string name="total_work_time">Total work time:</string>
+    <string name="average_work_time">Average work time:</string>
+</resources>

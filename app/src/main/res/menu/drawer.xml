@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="none">
+        <item
+            android:icon="@drawable/d_stats"
+            android:id="@+id/d_stats"
+            android:checked="false"
+            android:title="@string/page_stats" />
+
+        <item
+            android:icon="@drawable/d_details_list"
+            android:id="@+id/d_work_log"
+            android:checked="false"
+            android:title="@string/page_details" />
+
+        <item
+            android:icon="@drawable/d_mail"
+            android:id="@+id/d_send_report"
+            android:checked="false"
+            android:title="@string/page_report" />
+
+        <item
+            android:icon="@drawable/d_settings"
+            android:id="@+id/d_settings"
+            android:checked="false"
+            android:title="@string/page_settings" />
+
+        <item
+            android:icon="@drawable/d_locations_s"
+            android:id="@+id/d_gps"
+            android:checked="false"
+            android:title="@string/gps_settings" />
+
+        <item
+            android:icon="@drawable/d_locations"
+            android:id="@+id/d_gps_list"
+            android:checked="false"
+            android:title="@string/work_locations" />
+
+        <item
+            android:icon="@drawable/d_about_author"
+            android:id="@+id/d_about"
+            android:checked="false"
+            android:title="@string/menu_about_app" />
+
+        <item
+            android:icon="@drawable/d_about_app"
+            android:id="@+id/d_about_app"
+            android:checked="false"
+            android:title="@string/about_app" />
+    </group>
+</menu>
