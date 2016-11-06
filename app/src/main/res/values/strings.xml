@@ -26,19 +26,6 @@
     <string name="main_activity_dialog_password_input_hint">Enter password</string>
     <string name="main_activity_wrong_password">Entered password is incorrect</string>
 
-    <!--about app-->
-    <string name="about_app_about_app">About application</string>
-    <string name="about_app_content">Timesheet, czyli aplikacja zliczająca godziny pracy i generująca co miesięczny raport.
-        W ustawieniach możesz wybrać, aplikacja ma spełniać swoje unkcje na podstawie geolokalizacji, czy też klasycznie,
-        za pomocą przycisku \"start\/stop\". Aplikacja jest w stworzona z wykożystaniem bibliotek typu OpenSource."</string>
-    <string name="about_app_contact_on_clicked_mail">Contact</string>
-    <string name="about_app_no_mail_client">No mail client installed</string>
-    <string name="about_app_author">Author</string>
-    <string name="about_app_author_content">Michał Jabłoński</string>
-    <string name="about_app_contact">Contact</string>
-    <string name="about_app_mail">kofcio94@yahoo.com</string>
-    <string name="about_app_mail_click"> - click to contact me.</string>
-
     <!--mail-->
     <string name="mail_fragment_mail_description">Enter email address, where you want to send generated report.</string>
     <string name="mail_fragment_mail_to_send">Enter email address</string>
