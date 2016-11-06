@@ -12,6 +12,7 @@
     <color name="button_bg">#1976D2</color>
     <color name="swipe_menu_delete_background">#ffffff</color>
     <color name="gray_drawer">#FF4B4B4B</color>
+    <color name="cv_color">#17153d</color>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>

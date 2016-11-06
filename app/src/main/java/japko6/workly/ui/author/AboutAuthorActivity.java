@@ -27,6 +27,12 @@ public class AboutAuthorActivity extends BaseActivity {
 
     private void initView() {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+        findViewById(R.id.bt_back_cv).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
     }
 
 
