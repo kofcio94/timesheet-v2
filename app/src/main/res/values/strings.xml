@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Time work!</string>
+    <string name="app_name">Work log</string>
     <string name="application_is_loading">Application is loading</string>
     <string name="in_dev">in development</string>
     <string name="ok">OK</string>
