@@ -19,7 +19,6 @@ import com.nightonke.blurlockview.Password;
 import japko6.workly.R;
 import japko6.workly.prefs.Prefs;
 import japko6.workly.ui.main.MainActivity;
-import japko6.workly.widgets.CustomToast;
 
 public class SplashActivity extends AppCompatActivity {
     @Override
@@ -92,6 +91,5 @@ public class SplashActivity extends AppCompatActivity {
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         SplashActivity.this.startActivity(intent);
         overridePendingTransition(R.anim.fadein, R.anim.fadeout);
-        CustomToast.showPositiveToast(R.string.welcome, this);
     }
 }
