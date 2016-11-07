@@ -39,10 +39,17 @@
         android:progressTint="@color/colorPrimary"
         android:thumbTint="@color/button_bg" />
 
-    <com.github.mikephil.charting.charts.CombinedChart
-        android:id="@+id/chart"
+    <LinearLayout
+        android:id="@+id/llchart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/seek_bar"
-        android:layout_margin="15dp" />
+        android:orientation="horizontal">
+
+        <com.github.mikephil.charting.charts.CombinedChart
+            android:id="@+id/chart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp" />
+    </LinearLayout>
 </RelativeLayout>

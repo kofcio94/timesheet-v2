@@ -315,6 +315,7 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
             locationItem = new LocationItem("", "", 0, 0, radius);
         } else {
             headerTitle = getString(R.string.tootlbar_add_gps);
+            findViewById(R.id.tv_seek).setVisibility(View.GONE);
             viewHolder.seekRadius.setVisibility(View.GONE);
             viewHolder.mIvBtSave.setVisibility(View.GONE);
             viewHolder.mLlSearch.setVisibility(View.GONE);
