@@ -1,14 +1,11 @@
 package japko6.workly.ui.main;
 
-import android.content.Intent;
-
 import java.util.ArrayList;
 
 import japko6.workly.objects.DateKey;
 import japko6.workly.objects.Day;
 import japko6.workly.objects.Time;
 import japko6.workly.prefs.Prefs;
-import japko6.workly.services.ReminderService;
 import japko6.workly.ui.base.BasePresenter;
 import japko6.workly.ui.details.DetailsListFragment;
 import japko6.workly.utils.CalendarUtils;
@@ -40,9 +37,9 @@ public class MainPresenter extends BasePresenter<MainActivity> {
         DateKey actualDate = new DateKey();
 
         if (!buttonState) {
-            Counting.interrupt(actualTime);
+            Counting.interrupt(actualTime, Day.DESC_NORMAL);
         } else {
-            Counting.run(actualDate, actualTime);
+            Counting.run(actualDate, actualTime, Day.DESC_NORMAL);
             DetailsListFragment.listUpdateInterface.refreshList();
         }
         ReminderStarter.startStopReminderService(getView());
@@ -55,8 +52,8 @@ public class MainPresenter extends BasePresenter<MainActivity> {
                 return;
             }
             if (!days.get(days.size() - 1).getDate().equals(new DateKey())) {
-                Counting.interrupt(new Time());
-                Counting.run(new DateKey(), new Time());
+                Counting.interrupt(new Time(), Day.DESC_NORMAL);
+                Counting.run(new DateKey(), new Time(), Day.DESC_NORMAL);
             }
             getUpdatedTodayTime();
         }

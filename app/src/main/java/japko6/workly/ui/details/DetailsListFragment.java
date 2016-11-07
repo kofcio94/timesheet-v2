@@ -21,7 +21,7 @@ import japko6.workly.ui.base.BaseFragment;
 import japko6.workly.ui.details.adapter.DetailsListAdapter;
 import japko6.workly.ui.details.adapter.ItemDetail;
 import japko6.workly.ui.details.detailsNew.DetailsNewActivity;
-import japko6.workly.ui.details.edit.DetailsEditActivity;
+import japko6.workly.ui.details.detailsEdit.DetailsEditActivity;
 
 public class DetailsListFragment extends BaseFragment implements DetailsListPresenter.View {
 
@@ -152,7 +152,6 @@ public class DetailsListFragment extends BaseFragment implements DetailsListPres
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 
             getActivity().startActivity(intent);
-            getActivity().overridePendingTransition(R.anim.push_left_in, R.anim.push_left_out);
         }
     };
 

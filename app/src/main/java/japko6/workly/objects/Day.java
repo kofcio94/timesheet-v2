@@ -1,7 +1,5 @@
 package japko6.workly.objects;
 
-import android.support.annotation.Nullable;
-
 import java.util.ArrayList;
 
 import japko6.workly.utils.CalendarUtils;
@@ -9,30 +7,25 @@ import japko6.workly.utils.CalendarUtils;
 public class Day {
 
     public static final String DESC_VACATION = "Vacation";
-    public static final String DESC_GPS_START = "GPS";
-    public static final String DESC_NORMAL_START = "Normal";
+    public static final String DESC_GPS = "GPS";
+    public static final String DESC_NORMAL = "Normal";
 
     private ArrayList<WorkInterval> workIntervals;
     private DateKey date;
-
-    @Nullable
-    private String description;
 
     public Day() {
         this.workIntervals = null;
         this.date = new DateKey();
     }
 
-    public Day(int year, int month, int day, String description) {
+    public Day(int year, int month, int day) {
         this.workIntervals = null;
         date = new DateKey(year, month, day);
-        this.description = description;
     }
 
-    public Day(DateKey date, String description) {
+    public Day(DateKey date) {
         this.workIntervals = new ArrayList<>();
         this.date = date;
-        this.description = description;
     }
 
     public ArrayList<WorkInterval> getWorkIntervals() {
@@ -84,14 +77,5 @@ public class Day {
         m = t.getMinute();
 
         return h + m / 60;
-    }
-
-    @Nullable
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(@Nullable String description) {
-        this.description = description;
     }
 }

@@ -11,7 +11,12 @@ import com.github.javiersantos.bottomdialogs.BottomDialog;
 import japko6.workly.R;
 import japko6.workly.widgets.CustomToast;
 
-public abstract class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Override
+    public void onClick(View view) {
+        CustomToast.cancelActualToast();
+    }
 
     @Override
     protected void onResume() {
@@ -20,6 +25,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         if (supportActionBar != null) {
             supportActionBar.setTitle("");
             supportActionBar.setSubtitle("");
+            getActivityView().setOnClickListener(this);
         }
     }
 

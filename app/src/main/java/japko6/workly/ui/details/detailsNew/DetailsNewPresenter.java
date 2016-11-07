@@ -118,9 +118,9 @@ public class DetailsNewPresenter extends BasePresenter<DetailsNewActivity> {
 
         if (days == null) {
             days = new ArrayList<>();
-            days.add(new Day(dateKey, getView().selectedItem));
+            days.add(new Day(dateKey));
             ArrayList<WorkInterval> workIntervals = new ArrayList<>();
-            workIntervals.add(new WorkInterval(startTime, stopTime));
+            workIntervals.add(new WorkInterval(startTime, stopTime, Day.DESC_NORMAL));
             days.get(0).setWorkIntervals(workIntervals);
 
             Prefs.setDays(days);
@@ -131,7 +131,7 @@ public class DetailsNewPresenter extends BasePresenter<DetailsNewActivity> {
                     if (day.getWorkIntervals() == null) {
                         day.setWorkIntervals(new ArrayList<WorkInterval>());
                     }
-                    day.getWorkIntervals().add(new WorkInterval(startTime, stopTime));
+                    day.getWorkIntervals().add(new WorkInterval(startTime, stopTime, Day.DESC_NORMAL));
 
                     Prefs.setDays(days);
                     getView().showSuccessMsg();
@@ -139,12 +139,12 @@ public class DetailsNewPresenter extends BasePresenter<DetailsNewActivity> {
                 }
             }
 
-            days.add(new Day(dateKey, getView().selectedItem));
+            days.add(new Day(dateKey));
             if (days.get(days.size() - 1).getWorkIntervals() == null) {
                 ArrayList<WorkInterval> workIntervals = new ArrayList<>();
                 days.get(days.size() - 1).setWorkIntervals(workIntervals);
             }
-            days.get(days.size() - 1).getWorkIntervals().add(new WorkInterval(startTime, stopTime));
+            days.get(days.size() - 1).getWorkIntervals().add(new WorkInterval(startTime, stopTime, Day.DESC_NORMAL));
 
             Prefs.setDays(days);
             getView().showSuccessMsg();

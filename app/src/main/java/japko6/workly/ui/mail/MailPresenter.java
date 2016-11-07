@@ -80,12 +80,41 @@ public class MailPresenter extends BasePresenter<MailFragment> {
     protected boolean validateDate() {
         if (yearStop < yearStart) {
             return false;
-        } else if (monthStop < monthStart) {
-            return false;
-        } else return dayStop >= dayStart;
+        }
+
+        if (yearStop > yearStart) {
+            return true;
+        }
+
+        if (yearStart == yearStop) {
+            if (monthStart > monthStop) {
+                return false;
+            }
+
+            if (monthStart < monthStop) {
+                return true;
+            }
+
+            if (monthStart == monthStop) {
+                if (dayStart == dayStop) {
+                    return true;
+                }
+
+                if (dayStart > dayStop) {
+                    return false;
+                }
+
+                if (dayStart < dayStop) {
+                    return true;
+                }
+            }
+        }
+
+        return true;
     }
 
     public boolean isValidEmailAddress(String email) {
+        email = email.replace(" ", "");
         String ePattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@((\\[[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\.[0-9]{1,3}\\])|(([a-zA-Z\\-0-9]+\\.)+[a-zA-Z]{2,}))$";
         java.util.regex.Pattern p = java.util.regex.Pattern.compile(ePattern);
         java.util.regex.Matcher m = p.matcher(email);
@@ -93,8 +122,9 @@ public class MailPresenter extends BasePresenter<MailFragment> {
     }
 
     private void sendMail() {
-        if (TextUtils.isEmpty(getView().getMail())) {
+        if (TextUtils.isEmpty(getView().getMail().replace(" ", ""))) {
             getView().showNoMailEnteredInfo();
+            return;
         } else {
             if (isValidEmailAddress(getView().getMail())) {
                 Prefs.setEmail(getView().getMail());
@@ -107,8 +137,8 @@ public class MailPresenter extends BasePresenter<MailFragment> {
         ArrayList<Day> days = Prefs.getDays();
         DateKey startDate = new DateKey(this.yearStart, this.monthStart, this.dayStart);
         DateKey stopDate = new DateKey(this.yearStop, this.monthStop, this.dayStop);
-        ArrayList<Day> filteredArrayList = new ArrayList<>();
 
+        ArrayList<Day> filteredArrayList = new ArrayList<>();
         if (days == null) {
             getView().showEmptyDaysInfo();
             return;

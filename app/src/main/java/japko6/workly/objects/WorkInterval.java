@@ -6,7 +6,10 @@ public class WorkInterval {
     public Time startInterval;
     public Time stopInterval;
 
-    public WorkInterval(Time startInterval, @Nullable Time stopInterval) {
+    private String description;
+
+    public WorkInterval(Time startInterval, @Nullable Time stopInterval, String desc) {
+        this.description = desc;
         this.startInterval = startInterval;
         this.stopInterval = stopInterval;
     }
@@ -25,5 +28,13 @@ public class WorkInterval {
 
     public void setStopInterval(Time stopInterval) {
         this.stopInterval = stopInterval;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 }

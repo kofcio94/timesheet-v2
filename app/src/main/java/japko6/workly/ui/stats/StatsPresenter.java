@@ -49,7 +49,7 @@ public class StatsPresenter extends BasePresenter<StatsFragment> {
                 randHStop = getRandomFromRange(14, 20);
                 randMStart = getRandomFromRange(0, 59);
                 randMStop = getRandomFromRange(0, 59);
-                workIntervals.add(new WorkInterval(new Time(randHStart, randMStart), new Time(randHStop, randMStop)));
+                workIntervals.add(new WorkInterval(new Time(randHStart, randMStart), new Time(randHStop, randMStop), Day.DESC_NORMAL));
                 day.setWorkIntervals(workIntervals);
                 days.add(day);
             }

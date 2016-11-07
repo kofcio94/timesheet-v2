@@ -67,7 +67,7 @@ public class DetailsListPresenter extends BasePresenter<DetailsListFragment> {
                 Time time = CalendarUtils.getWorkingTime(workInterval.getStartInterval(), workInterval.getStopInterval());
                 String sTime = CalendarUtils.parseTimeToString(time.getHour(), time.getMinute());
 
-                ItemDetail itemDetail = new ItemDetail(date, sWorkInterval, sTime, day.getDescription());
+                ItemDetail itemDetail = new ItemDetail(date, sWorkInterval, sTime, workInterval.getDescription());
                 itemDetail.setWorkIntervalPosition(positionWorkInterval);
                 itemDetail.setDaysPosition(positionDay);
                 itemDetailArray.add(itemDetail);
@@ -79,11 +79,6 @@ public class DetailsListPresenter extends BasePresenter<DetailsListFragment> {
         }
         Collections.reverse(itemDetailArray);
         return itemDetailArray;
-    }
-
-
-    protected void onDeleteConfirmed(ItemDetail itemDetail) {
-
     }
 
     protected void onButtonAddClicked() {

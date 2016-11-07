@@ -34,7 +34,7 @@
     <string name="mail_fragment_report_subject">Timesheet from: </string>
     <string name="mail_fragment_no_email_entered">No email entered</string>
     <string name="mail_fragment_no_mail_client">Mail client</string>
-    <string name="mail_fragment_no_data_plus">No data. Try from date: </string>
+    <string name="mail_fragment_no_data_plus">Choose exact day which you want to start report.</string>
     <string name="mail_fragment_no_data">You have to work at least one day!</string>
     <string name="mail_fragment_intent_title">Choose mail client.</string>
     <string name="mail_fragment_time_work_total_mail">Whole work time:</string>

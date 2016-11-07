@@ -1,9 +1,10 @@
-package japko6.workly.ui.details.edit;
+package japko6.workly.ui.details.detailsEdit;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -94,7 +95,6 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
     @Override
     public void backToMainActivity() {
         finish();
-        DetailsEditActivity.this.overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
     }
 
     @Override
@@ -132,19 +132,49 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
                 R.array.type_counting_array, android.R.layout.simple_spinner_item);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         viewHolder.spinner.setAdapter(adapter);
-
         int selection;
-        if (itemDetail.getDesc().equals(Day.DESC_NORMAL_START)) {
-            desc = Day.DESC_NORMAL_START;
+
+        try {
+            if (itemDetail.getDesc().equals(Day.DESC_NORMAL)) {
+                desc = Day.DESC_NORMAL;
+                selection = 0;
+            } else if (itemDetail.getDesc().equals(Day.DESC_GPS)) {
+                desc = Day.DESC_GPS;
+                selection = 1;
+            } else if (itemDetail.getDesc().equals(Day.DESC_VACATION)) {
+                desc = Day.DESC_VACATION;
+                selection = 2;
+            } else selection = 0;
+        } catch (Exception e) {
+            e.printStackTrace();
             selection = 0;
-        } else if (itemDetail.getDesc().equals(Day.DESC_GPS_START)) {
-            desc = Day.DESC_GPS_START;
-            selection = 1;
-        } else if (itemDetail.getDesc().equals(Day.DESC_VACATION)) {
-            desc = Day.DESC_VACATION;
-            selection = 2;
-        } else selection = 0;
+        }
+
         viewHolder.spinner.setSelection(selection);
+
+        viewHolder.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 2:
+                        desc = Day.DESC_VACATION;
+                        break;
+                    case 1:
+                        desc = Day.DESC_GPS;
+                        break;
+                    case 0:
+                        desc = Day.DESC_NORMAL;
+                        break;
+                    default:
+                        desc = Day.DESC_NORMAL;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private void setUpData() {

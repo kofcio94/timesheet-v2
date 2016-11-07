@@ -27,7 +27,7 @@ public class DaysUtils {
     }
 
     private static Day getLowestDay(ArrayList<Day> days) {
-        Day day = new Day(new DateKey(20999, 113, 113), null);
+        Day day = new Day(new DateKey(20999, 113, 113));
         for (int i = 0; i < days.size(); i++) {
             try {
                 if (SortUtils.isLeftGreaterThanRight(day.getDate(), days.get(i).getDate())) {

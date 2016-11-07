@@ -32,7 +32,7 @@ public class DetailsNewActivity extends BaseActivity implements DetailsNewPresen
         FROM, TO
     }
 
-    public String selectedItem = Day.DESC_NORMAL_START;
+    public String selectedItem = Day.DESC_NORMAL;
 
     DetailsNewPresenter presenter;
     private ViewHolder viewHolder;
@@ -98,13 +98,13 @@ public class DetailsNewActivity extends BaseActivity implements DetailsNewPresen
                         selectedItem = Day.DESC_VACATION;
                         break;
                     case 1:
-                        selectedItem = Day.DESC_GPS_START;
+                        selectedItem = Day.DESC_GPS;
                         break;
                     case 0:
-                        selectedItem = Day.DESC_NORMAL_START;
+                        selectedItem = Day.DESC_NORMAL;
                         break;
                     default:
-                        selectedItem = Day.DESC_NORMAL_START;
+                        selectedItem = Day.DESC_NORMAL;
                 }
             }
 

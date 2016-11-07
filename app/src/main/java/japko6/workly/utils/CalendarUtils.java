@@ -245,20 +245,27 @@ public class CalendarUtils {
             int mYear = day.getDate().getYear();
 
             report += parseDateToString(mYear, mMonth, mDay) + "\n";
-
+            String daytype;
             for (WorkInterval workInterval : day.getWorkIntervals()) {
+                if (workInterval.getDescription().equals(Day.DESC_VACATION)) {
+                    daytype = " - " + Day.DESC_VACATION;
+                } else {
+                    daytype = "";
+                }
                 report += "       " +
                         parseTimeToString(workInterval.getStartInterval().getHour(), workInterval.getStartInterval().getMinute())
                         + "  -  " +
                         parseTimeToString(workInterval.getStopInterval().getHour(), workInterval.getStopInterval().getMinute())
+                        +
+                        daytype
                         + "\n";
             }
-            report += "\n       " + context.getString(R.string.mail_fragment_time_work_mail) + " "
-                    + parseTimeToString(day.getTotalWorkTime().getHour(), day.getTotalWorkTime().getMinute()) + "\n\n\n";
+            report += "       " + context.getString(R.string.mail_fragment_time_work_mail) + " "
+                    + parseTimeToString(day.getTotalWorkTime().getHour(), day.getTotalWorkTime().getMinute()) + "\n\n";
             workTime.addTime(day.getTotalWorkTime());
         }
 
-        report += "\n\n______________________\n" + context.getString(R.string.mail_fragment_time_work_total_mail) + " "
+        report += "\n______________________\n" + context.getString(R.string.mail_fragment_time_work_total_mail) + " "
                 + parseTimeToString(workTime.getHour(), workTime.getMinute());
         return report;
     }

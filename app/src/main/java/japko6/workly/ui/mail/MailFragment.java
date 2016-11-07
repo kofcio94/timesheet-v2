@@ -181,21 +181,7 @@ public class MailFragment extends BaseFragment implements MailPresenter.view {
         String info;
 
         if (date != null) {
-            String month;
-            String day;
-            if (date.getMonth() < 9) {
-                month = "0" + String.valueOf(date.getMonth() + 1);
-            } else {
-                month = String.valueOf(date.getMonth() + 1);
-            }
-
-            if (date.getDay() < 10) {
-                day = "0" + String.valueOf(date.getDay());
-            } else {
-                day = String.valueOf(date.getDay());
-            }
-            info = getString(R.string.mail_fragment_no_data_plus) + " "
-                    + day + "." + month + "." + String.valueOf(date.getYear());
+            info = getString(R.string.mail_fragment_no_data_plus);
         } else {
             info = getString(R.string.mail_fragment_no_data);
         }

@@ -1,4 +1,4 @@
-package japko6.workly.ui.details.edit;
+package japko6.workly.ui.details.detailsEdit;
 
 import java.util.ArrayList;
 
@@ -129,7 +129,7 @@ public class DetailsEditPresenter extends BasePresenter<DetailsEditActivity> {
             }
             days.get(itemDetail.getDaysPosition()).getWorkIntervals().get(itemDetail.getWorkIntervalPosition()).setStartInterval(startTime);
             days.get(itemDetail.getDaysPosition()).getWorkIntervals().get(itemDetail.getWorkIntervalPosition()).setStopInterval(stopTime);
-            days.get(itemDetail.getDaysPosition()).setDescription(getView().desc);
+            days.get(itemDetail.getDaysPosition()).getWorkIntervals().get(itemDetail.getWorkIntervalPosition()).setDescription(getView().desc);
             Prefs.setDays(days);
             getView().showSuccessInfo();
         } else {

@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import japko6.workly.R;
 import japko6.workly.objects.DateKey;
+import japko6.workly.objects.Day;
 import japko6.workly.objects.LocationItem;
 import japko6.workly.objects.Time;
 import japko6.workly.prefs.Prefs;
@@ -57,7 +58,7 @@ public class LocationCheckService extends Service {
                         if (!Prefs.isWorking()) {
                             Time actualTime = new Time();
                             DateKey actualDate = new DateKey();
-                            Counting.run(actualDate, actualTime);
+                            Counting.run(actualDate, actualTime, Day.DESC_GPS);
                             MainActivity.countingListener.onBegin();
                         }
                     }
@@ -71,7 +72,7 @@ public class LocationCheckService extends Service {
                     if (Prefs.getGPSMode()) {
                         if (Prefs.isWorking()) {
                             Time actualTime = new Time();
-                            Counting.interrupt(actualTime);
+                            Counting.interrupt(actualTime, Day.DESC_GPS);
                             MainActivity.countingListener.onNotWorking();
                         }
                     }
