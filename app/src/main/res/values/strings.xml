@@ -215,4 +215,5 @@
     <string name="com_google_android_gms_play_services_9_8_0">com.google.android.gms:play-services:9.8.0</string>
     <string name="com_android_support_appcompat_v7_25_0_0">com.android.support:appcompat-v7:25.0.0</string>
     <string name="com_android_support_design_25_0_0">com.android.support:design:25.0.0</string>
+    <string name="work_radius">Work radius</string>
 </resources>

@@ -9,12 +9,14 @@ public class LocationItem implements Serializable {
     private double w, l;
     private String title;
     private int position;
+    private int radius;
 
-    public LocationItem(String title, String content, double w, double l) {
+    public LocationItem(String title, String content, double w, double l, int radius) {
         this.content = content;
         this.w = w;
         this.l = l;
         this.title = title;
+        this.radius = radius;
     }
 
     public String getContent() {
@@ -48,5 +50,13 @@ public class LocationItem implements Serializable {
 
     public void setPosition(int position) {
         this.position = position;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 }

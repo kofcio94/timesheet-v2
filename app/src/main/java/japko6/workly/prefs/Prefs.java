@@ -30,7 +30,8 @@ public class Prefs {
             KEY_ADVANCED_ANIMATIONS = "key_advanced_animations",
             KEY_CHART_DAYS = "key_chart_days",
             KEY_WORK_NOTIFICATION = "key_work_notification",
-            KEY_IS_REMINDER_WORKING = "key_is_reminder_working";
+            KEY_IS_REMINDER_WORKING = "key_is_reminder_working",
+            KEY_COUNTING_DESC = "key_counting_description";
 
     private static ComplexPreferences complexPrefs;
 
@@ -105,6 +106,23 @@ public class Prefs {
             return isReg;
         } catch (Exception e) {
             return false;
+        }
+    }
+
+    public static void setCountingDesc(String desc) {
+        complexPrefs.putObject(KEY_COUNTING_DESC, desc);
+        complexPrefs.commit();
+    }
+
+    public static String getKeyCountingDesc() {
+        try {
+            String desc = complexPrefs.getObject(KEY_COUNTING_DESC, String.class);
+            if (desc == null) {
+                return "";
+            }
+            return desc;
+        } catch (Exception e) {
+            return "";
         }
     }
 

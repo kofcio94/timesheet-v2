@@ -156,7 +156,7 @@ public class LocationCheckService extends Service {
                 + " (Work position position)" + "\n"
                 + "is " + String.valueOf(distance) + "\n");
 
-        return distance < 100;
+        return distance <= locationItem.getRadius();
     }
 
     private double distance(Location l1, Location l2) {

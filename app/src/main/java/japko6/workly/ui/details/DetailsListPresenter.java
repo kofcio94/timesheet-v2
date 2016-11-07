@@ -67,7 +67,7 @@ public class DetailsListPresenter extends BasePresenter<DetailsListFragment> {
                 Time time = CalendarUtils.getWorkingTime(workInterval.getStartInterval(), workInterval.getStopInterval());
                 String sTime = CalendarUtils.parseTimeToString(time.getHour(), time.getMinute());
 
-                ItemDetail itemDetail = new ItemDetail(date, sWorkInterval, sTime);
+                ItemDetail itemDetail = new ItemDetail(date, sWorkInterval, sTime, day.getDescription());
                 itemDetail.setWorkIntervalPosition(positionWorkInterval);
                 itemDetail.setDaysPosition(positionDay);
                 itemDetailArray.add(itemDetail);

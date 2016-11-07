@@ -10,6 +10,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
+import android.support.v7.widget.AppCompatSeekBar;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
@@ -23,6 +24,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -67,6 +69,8 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
 
     private Circle circle;
     private Marker marker;
+
+    private int radius = 200;
 
     private List<Address> addresses;
 
@@ -129,6 +133,28 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
                 locationItem.setContent(editable.toString());
             }
         });
+        viewHolder.seekRadius.setProgress(radius);
+        viewHolder.seekRadius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+                radius = seekBar.getProgress() * 4;
+                if (circle == null) {
+                    return;
+                }
+                circle.setRadius(radius);
+                locationItem.setRadius(radius);
+            }
+        });
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -164,7 +190,7 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
             location = locationItem.getLatLng();
             googleMap.addMarker(new MarkerOptions().position(location).title(locationItem.getTitle()));
             zoom = 13;
-            circle = googleMap.addCircle(new CircleOptions().radius(200)
+            circle = googleMap.addCircle(new CircleOptions().radius(radius)
                     .center(location)
                     .strokeColor(Color.BLUE)
                     .fillColor(Color.parseColor("#500084d3")));
@@ -183,7 +209,7 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
                         circle.remove();
                     }
                     circle = googleMap.addCircle(new CircleOptions()
-                            .radius(200)
+                            .radius(radius)
                             .center(latLng)
                             .strokeColor(Color.BLUE)
                             .fillColor(Color.parseColor("#500084d3"))
@@ -222,7 +248,7 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
                 @Override
                 public void onMarkerDragEnd(Marker marker) {
                     circle = googleMap.addCircle(new CircleOptions()
-                            .radius(200)
+                            .radius(radius)
                             .center(marker.getPosition())
                             .strokeColor(Color.BLUE)
                             .fillColor(Color.parseColor("#500084d3")));
@@ -286,9 +312,10 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
 
         if (actualState == STATE.ADD) {
             headerTitle = getString(R.string.gps_map_toolbar);
-            locationItem = new LocationItem("", "", 0, 0);
+            locationItem = new LocationItem("", "", 0, 0, radius);
         } else {
             headerTitle = getString(R.string.tootlbar_add_gps);
+            viewHolder.seekRadius.setVisibility(View.GONE);
             viewHolder.mIvBtSave.setVisibility(View.GONE);
             viewHolder.mLlSearch.setVisibility(View.GONE);
             locationItem = (LocationItem) extras.get(KEY_LOCATION_ITEM);
@@ -481,5 +508,8 @@ public class LocationMapActivity extends BaseActivity implements LocationMapPres
 
         @Bind(R.id.gps_map_content)
         EditText mEtContent;
+
+        @Bind(R.id.seek_bar)
+        AppCompatSeekBar seekRadius;
     }
 }

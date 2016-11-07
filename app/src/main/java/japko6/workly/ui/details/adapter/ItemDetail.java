@@ -9,13 +9,15 @@ public class ItemDetail implements Serializable {
     private String time;
     private int workIntervalPosition;
     private int daysPosition;
+    private String desc;
 
-    public ItemDetail(String date, String workInterval, String time) {
+    public ItemDetail(String date, String workInterval, String time, String desc) {
         this.date = date;
         this.workInterval = workInterval;
         this.time = time;
         this.daysPosition = -1;
         this.daysPosition = -1;
+        this.desc = desc;
     }
 
     public String getDate() {
@@ -56,5 +58,17 @@ public class ItemDetail implements Serializable {
 
     public void setDaysPosition(Integer daysPosition) {
         this.daysPosition = daysPosition;
+    }
+
+    public void setDaysPosition(int daysPosition) {
+        this.daysPosition = daysPosition;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
     }
 }

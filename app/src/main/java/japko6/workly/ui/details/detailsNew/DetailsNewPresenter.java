@@ -8,7 +8,6 @@ import japko6.workly.objects.Time;
 import japko6.workly.objects.WorkInterval;
 import japko6.workly.prefs.Prefs;
 import japko6.workly.ui.base.BasePresenter;
-import japko6.workly.ui.details.detailsNew.DetailsNewActivity;
 import japko6.workly.utils.CalendarUtils;
 import japko6.workly.utils.SortUtils;
 
@@ -119,7 +118,7 @@ public class DetailsNewPresenter extends BasePresenter<DetailsNewActivity> {
 
         if (days == null) {
             days = new ArrayList<>();
-            days.add(new Day(dateKey));
+            days.add(new Day(dateKey, getView().selectedItem));
             ArrayList<WorkInterval> workIntervals = new ArrayList<>();
             workIntervals.add(new WorkInterval(startTime, stopTime));
             days.get(0).setWorkIntervals(workIntervals);
@@ -140,7 +139,7 @@ public class DetailsNewPresenter extends BasePresenter<DetailsNewActivity> {
                 }
             }
 
-            days.add(new Day(dateKey));
+            days.add(new Day(dateKey, getView().selectedItem));
             if (days.get(days.size() - 1).getWorkIntervals() == null) {
                 ArrayList<WorkInterval> workIntervals = new ArrayList<>();
                 days.get(days.size() - 1).setWorkIntervals(workIntervals);

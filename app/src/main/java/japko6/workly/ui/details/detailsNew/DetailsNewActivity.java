@@ -1,12 +1,13 @@
 package japko6.workly.ui.details.detailsNew;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.codetroopers.betterpickers.calendardatepicker.CalendarDatePickerDialogFragment;
@@ -17,6 +18,7 @@ import java.util.Calendar;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import japko6.workly.R;
+import japko6.workly.objects.Day;
 import japko6.workly.prefs.Prefs;
 import japko6.workly.ui.base.BaseActivity;
 import japko6.workly.utils.CalendarUtils;
@@ -29,6 +31,8 @@ public class DetailsNewActivity extends BaseActivity implements DetailsNewPresen
     protected enum date {
         FROM, TO
     }
+
+    public String selectedItem = Day.DESC_NORMAL_START;
 
     DetailsNewPresenter presenter;
     private ViewHolder viewHolder;
@@ -81,6 +85,34 @@ public class DetailsNewActivity extends BaseActivity implements DetailsNewPresen
         viewHolder.llDate.setOnClickListener(clickListener);
         viewHolder.llTimeFrom.setOnClickListener(clickListener);
         viewHolder.llTimeTo.setOnClickListener(clickListener);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.type_counting_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        viewHolder.spinner.setAdapter(adapter);
+        viewHolder.spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 2:
+                        selectedItem = Day.DESC_VACATION;
+                        break;
+                    case 1:
+                        selectedItem = Day.DESC_GPS_START;
+                        break;
+                    case 0:
+                        selectedItem = Day.DESC_NORMAL_START;
+                        break;
+                    default:
+                        selectedItem = Day.DESC_NORMAL_START;
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
     }
 
     private void setUpToolbar() {
@@ -247,5 +279,8 @@ public class DetailsNewActivity extends BaseActivity implements DetailsNewPresen
 
         @Bind(R.id.details_new_ll_time_stop)
         LinearLayout llTimeTo;
+
+        @Bind(R.id.spinner)
+        Spinner spinner;
     }
 }

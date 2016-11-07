@@ -4,8 +4,10 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.codetroopers.betterpickers.radialtimepicker.RadialTimePickerDialogFragment;
@@ -14,6 +16,7 @@ import com.github.javiersantos.bottomdialogs.BottomDialog;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import japko6.workly.R;
+import japko6.workly.objects.Day;
 import japko6.workly.prefs.Prefs;
 import japko6.workly.ui.base.BaseActivity;
 import japko6.workly.ui.details.DetailsListFragment;
@@ -25,8 +28,8 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
         FROM, TO
     }
 
-    private ItemDetail itemDetail;
-
+    public ItemDetail itemDetail;
+    public String desc;
     private DetailsEditPresenter presenter;
     private ViewHolder viewHolder;
     private RadialTimePickerDialogFragment mTimePicker;
@@ -70,7 +73,6 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
-
         viewHolder.mTvToolbar.setText(itemDetail.getDate());
     }
 
@@ -125,6 +127,24 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
         viewHolder.ivDelete.setOnClickListener(clickListener);
         viewHolder.llTimeStart.setOnClickListener(clickListener);
         viewHolder.llTimeStop.setOnClickListener(clickListener);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
+                R.array.type_counting_array, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        viewHolder.spinner.setAdapter(adapter);
+
+        int selection;
+        if (itemDetail.getDesc().equals(Day.DESC_NORMAL_START)) {
+            desc = Day.DESC_NORMAL_START;
+            selection = 0;
+        } else if (itemDetail.getDesc().equals(Day.DESC_GPS_START)) {
+            desc = Day.DESC_GPS_START;
+            selection = 1;
+        } else if (itemDetail.getDesc().equals(Day.DESC_VACATION)) {
+            desc = Day.DESC_VACATION;
+            selection = 2;
+        } else selection = 0;
+        viewHolder.spinner.setSelection(selection);
     }
 
     private void setUpData() {
@@ -309,5 +329,8 @@ public class DetailsEditActivity extends BaseActivity implements DetailsEditPres
 
         @Bind(R.id.details_edit_ll_time_stop)
         LinearLayout llTimeStop;
+
+        @Bind(R.id.spinner)
+        Spinner spinner;
     }
 }

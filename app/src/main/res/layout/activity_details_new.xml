@@ -62,14 +62,14 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:paddingBottom="5dp"
             android:id="@+id/details_new_ll_date"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="10dp"
             android:background="@drawable/ripple_transparent"
             android:clickable="true"
             android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
             android:weightSum="100">
 
             <LinearLayout
@@ -108,14 +108,14 @@
         </LinearLayout>
 
         <LinearLayout
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
             android:id="@+id/details_new_ll_time_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ripple_transparent"
             android:clickable="true"
             android:orientation="horizontal"
+            android:paddingBottom="5dp"
+            android:paddingTop="5dp"
             android:weightSum="100">
 
             <LinearLayout
@@ -155,14 +155,14 @@
 
 
         <LinearLayout
-            android:paddingTop="5dp"
             android:id="@+id/details_new_ll_time_stop"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/ripple_transparent"
             android:clickable="true"
-            android:paddingBottom="10dp"
             android:orientation="horizontal"
+            android:paddingBottom="10dp"
+            android:paddingTop="5dp"
             android:weightSum="100">
 
             <LinearLayout
@@ -200,12 +200,27 @@
                 android:src="@drawable/button_edit_on_press" />
         </LinearLayout>
 
-        <View
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="Work type" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp" />
+
+        <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
             android:background="@color/colorAccent" />
     </LinearLayout>
 
