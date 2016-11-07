@@ -99,7 +99,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/81813780/AVLoadingIndicatorView" />
+                    android:text="@string/https_github_com_81813780_avloadingindicatorview" />
             </LinearLayout>
 
             <LinearLayout
@@ -126,7 +126,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="http://jakewharton.github.io/butterknife/" />
+                    android:text="@string/http_jakewharton_github_io_butterknife" />
             </LinearLayout>
 
             <LinearLayout
@@ -153,7 +153,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/javiersantos/BottomDialogs" />
+                    android:text="@string/https_github_com_javiersantos_bottomdialogs" />
             </LinearLayout>
 
             <LinearLayout
@@ -180,7 +180,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/florent37/DiagonalLayout" />
+                    android:text="@string/https_github_com_florent37_diagonallayout" />
             </LinearLayout>
 
             <LinearLayout
@@ -207,7 +207,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/flavioarfaria/KenBurnsView" />
+                    android:text="@string/https_github_com_flavioarfaria_kenburnsview" />
             </LinearLayout>
 
             <LinearLayout
@@ -234,7 +234,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/hdodenhof/CircleImageView" />
+                    android:text="@string/https_github_com_hdodenhof_circleimageview" />
             </LinearLayout>
 
             <LinearLayout
@@ -261,7 +261,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/code-troopers/android-betterpickers" />
+                    android:text="@string/https_github_com_code_troopers_android_betterpickers" />
             </LinearLayout>
 
             <LinearLayout
@@ -288,7 +288,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/kyleduo/SwitchButton" />
+                    android:text="@string/https_github_com_kyleduo_switchbutton" />
             </LinearLayout>
 
             <LinearLayout
@@ -315,7 +315,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/PhilJay/MPAndroidChart" />
+                    android:text="@string/https_github_com_philjay_mpandroidchart" />
             </LinearLayout>
 
             <LinearLayout
@@ -342,7 +342,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/Nightonke/BlurLockView" />
+                    android:text="@string/https_github_com_nightonke_blurlockview" />
             </LinearLayout>
 
 
@@ -370,7 +370,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/markushi/android-circlebutton" />
+                    android:text="@string/https_github_com_markushi_android_circlebutton" />
             </LinearLayout>
 
             <LinearLayout
@@ -397,7 +397,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/baoyongzhang/SwipeMenuListView" />
+                    android:text="@string/https_github_com_baoyongzhang_swipemenulistview" />
             </LinearLayout>
 
             <LinearLayout
@@ -424,7 +424,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/afollestad/material-dialogs" />
+                    android:text="@string/https_github_com_afollestad_material_dialogs" />
             </LinearLayout>
 
             <LinearLayout
@@ -451,7 +451,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/mikepenz/MaterialDrawer" />
+                    android:text="@string/https_github_com_mikepenz_materialdrawer" />
             </LinearLayout>
 
             <LinearLayout
@@ -477,7 +477,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="junit:junit:4.12" />
+                    android:text="@string/junit_junit_4_12" />
             </LinearLayout>
 
             <LinearLayout
@@ -503,7 +503,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="com.android.support:multidex:1.0.1" />
+                    android:text="@string/com_android_support_multidex_1_0_1" />
             </LinearLayout>
 
             <LinearLayout
@@ -530,7 +530,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="https://github.com/google/gson" />
+                    android:text="@string/https_github_com_google_gson" />
             </LinearLayout>
 
             <LinearLayout
@@ -556,7 +556,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="com.google.android.gms:play-services:9.8.0" />
+                    android:text="@string/com_google_android_gms_play_services_9_8_0" />
             </LinearLayout>
 
             <LinearLayout
@@ -582,7 +582,7 @@
                     android:orientation="vertical"
                     android:paddingLeft="10dp"
                     android:paddingRight="10dp"
-                    android:text="com.android.support:appcompat-v7:25.0.0" />
+                    android:text="@string/com_android_support_appcompat_v7_25_0_0" />
             </LinearLayout>
 
             <LinearLayout
@@ -602,7 +602,7 @@
                     android:textSize="13sp" />
 
                 <TextView
-                    android:text="com.android.support:design:25.0.0"
+                    android:text="@string/com_android_support_design_25_0_0"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="60"

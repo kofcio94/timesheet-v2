@@ -195,4 +195,24 @@
     <string name="junit">Tests</string>
     <string name="design">Design (google lib)</string>
     <string name="support">Support library</string>
+    <string name="https_github_com_81813780_avloadingindicatorview">https://github.com/81813780/AVLoadingIndicatorView</string>
+    <string name="http_jakewharton_github_io_butterknife">http://jakewharton.github.io/butterknife/</string>
+    <string name="https_github_com_javiersantos_bottomdialogs">https://github.com/javiersantos/BottomDialogs</string>
+    <string name="https_github_com_florent37_diagonallayout">https://github.com/florent37/DiagonalLayout</string>
+    <string name="https_github_com_flavioarfaria_kenburnsview">https://github.com/flavioarfaria/KenBurnsView</string>
+    <string name="https_github_com_hdodenhof_circleimageview">https://github.com/hdodenhof/CircleImageView</string>
+    <string name="https_github_com_code_troopers_android_betterpickers">https://github.com/code-troopers/android-betterpickers</string>
+    <string name="https_github_com_kyleduo_switchbutton">https://github.com/kyleduo/SwitchButton</string>
+    <string name="https_github_com_philjay_mpandroidchart">https://github.com/PhilJay/MPAndroidChart</string>
+    <string name="https_github_com_nightonke_blurlockview">https://github.com/Nightonke/BlurLockView</string>
+    <string name="https_github_com_markushi_android_circlebutton">https://github.com/markushi/android-circlebutton</string>
+    <string name="https_github_com_baoyongzhang_swipemenulistview">https://github.com/baoyongzhang/SwipeMenuListView</string>
+    <string name="https_github_com_afollestad_material_dialogs">https://github.com/afollestad/material-dialogs</string>
+    <string name="https_github_com_mikepenz_materialdrawer">https://github.com/mikepenz/MaterialDrawer</string>
+    <string name="junit_junit_4_12">junit:junit:4.12</string>
+    <string name="com_android_support_multidex_1_0_1">com.android.support:multidex:1.0.1</string>
+    <string name="https_github_com_google_gson">https://github.com/google/gson</string>
+    <string name="com_google_android_gms_play_services_9_8_0">com.google.android.gms:play-services:9.8.0</string>
+    <string name="com_android_support_appcompat_v7_25_0_0">com.android.support:appcompat-v7:25.0.0</string>
+    <string name="com_android_support_design_25_0_0">com.android.support:design:25.0.0</string>
 </resources>
