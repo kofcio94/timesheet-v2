@@ -91,7 +91,8 @@ public class ReminderService extends Service {
         builder.setSmallIcon(R.drawable.ic_work_white_24dp);
         int color = ContextCompat.getColor(this, R.color.button_bg);
         builder.setColor(color);
-        builder.setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.drawable.app_icon));
+        builder.setLargeIcon(BitmapFactory.decodeResource(this.getResources(), R.mipmap.ic_launcher));
+        builder.setContentTitle(getString(R.string.app_name));
         builder.setAutoCancel(true);
         builder.setContentText(getString(R.string.reminder_not_content));
         builder.setTicker(getString(R.string.reminder_not_content));
