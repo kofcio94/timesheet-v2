@@ -61,7 +61,10 @@ public class LocationCheckService extends Service {
                             Time actualTime = new Time();
                             DateKey actualDate = new DateKey();
                             Counting.run(actualDate, actualTime, Day.DESC_GPS);
-                            MainActivity.countingListener.onBegin();
+                            try {
+                                MainActivity.countingListener.onBegin();
+                            } catch (Exception e) {
+                            }
                         }
                     }
 
@@ -75,7 +78,10 @@ public class LocationCheckService extends Service {
                         if (Prefs.isWorking()) {
                             Time actualTime = new Time();
                             Counting.interrupt(actualTime, Day.DESC_GPS);
-                            MainActivity.countingListener.onNotWorking();
+                            try {
+                                MainActivity.countingListener.onNotWorking();
+                            } catch (Exception e) {
+                            }
                         }
                     }
                     showNotification = true;
